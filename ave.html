@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- AFRAME -->
+    <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
+    <!-- RESONANCE AUDIO -->
+    <script src="https://cdn.jsdelivr.net/npm/resonance-audio/build/resonance-audio.min.js"></script>
+    <!-- TONE.JS-->
+    <script src="https://unpkg.com/tone@13.4.9/build/Tone.js"></script>
+    <!-- WHP SCRIPTS -->
+    <script src="js/aframe-change-color.js"></script>
+    <script src="js/aframe-synth.js"></script>
+</head>
+<body>
+<a-scene>
+    <!-- SKY -->
+    <!--  -->
+    <a-sky id="sky" color="#000" change-color="color1:#FFF; color2:#000; interval:100" ></a-sky>
+
+    <!-- CAMERA -->
+    <a-camera id="camera"></a-camera>
+
+    <!-- SYNTH -->
+    <a-entity id="synth" synth></a-entity>
+</a-scene>
+</body>
+</html>
