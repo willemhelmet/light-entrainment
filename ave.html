@@ -7,21 +7,32 @@
     <script src="https://cdn.jsdelivr.net/npm/resonance-audio/build/resonance-audio.min.js"></script>
     <!-- TONE.JS-->
     <script src="https://unpkg.com/tone@13.4.9/build/Tone.js"></script>
+    <!-- A-FRAME STEREO COMPONENT -->
+    <script src="js/aframe-stereo-component.js"></script>
+    
     <!-- WHP SCRIPTS -->
     <script src="js/aframe-change-color.js"></script>
     <script src="js/aframe-synth.js"></script>
 </head>
 <body>
 <a-scene>
-    <!-- SKY -->
-    <!--  -->
-    <a-sky id="sky" color="#000" change-color="color1:#FFF; color2:#000; interval:100" ></a-sky>
 
+    <a-assets>
+        <a-asset-item id="box_gltf" src="assets/models/box.gltf"></a-asset-item>
+    </a-assets>
+
+    <!-- SKY -->
+    <!--
+    -->
+    <a-sky id="strobe-left" color="#000" change-color="color1:#FFF; color2:#000; interval:100" stereo="eye: left"></a-sky>
+    <a-sky id="strobe-right" color="#000" change-color="color1:#FFF; color2:#000; interval:100" stereo="eye: right"></a-sky>
+s
     <!-- CAMERA -->
-    <a-camera id="camera"></a-camera>
+    <a-camera id="camera" stereocam="eye:left;"></a-camera>
 
     <!-- SYNTH -->
     <a-entity id="synth" synth></a-entity>
+
 </a-scene>
 </body>
 </html>
